@@ -5,7 +5,7 @@
 class modBiz_fb_groups
 {
     /**
-     
+
      */
     public static function getScript($params)
 	{
