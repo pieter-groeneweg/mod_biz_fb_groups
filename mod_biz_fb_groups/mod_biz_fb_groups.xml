@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.8.10" client="site" method="upgrade">
+    <name>Like Facebook Group</name>
+    <author>Pieter Groeneweg</author>
+    <version>1.0.0</version>
+    <description>Like button for facebook groups</description>
+    <files>
+        <filename>mod_biz_fb_groups.xml</filename>
+        <filename module="mod_biz_fb_groups">mod_biz_fb_groups.php</filename>
+        <filename>index.html</filename>
+        <filename>helper.php</filename>
+        <filename>tmpl/default.php</filename>
+        <filename>tmpl/index.html</filename>
+    </files>
+	<config>
+	
+		<fields name="params">
+			<fieldset name="basic">
+
+            	<field name="APP_ID" type="text" default="" label="APP_ID" description="The App ID of your Facebook app." />
+				<field name="data-href" type="text" default="" label="data-href" description="The absolute URL of the group." />
+            	<field name="data-width" type="text" default="280" label="data-width" description="Set the plugin width in pixels. The minimum width is 180 and the maximu width is 500 pixels." />
+            	<field name="data-show-social-context" type="list" default="TRUE" label="data-show-social-context" description="Show the number of friends who are members of the group.">
+  					<option value="TRUE">TRUE</option>
+					<option value="FALSE">FALSE</option>
+				</field>
+            	<field name="data-show-metadata" type="list" default="FALSE" label="data-show-metadata" description="Shows other metadata about the group, e.g., Description.">
+  					<option value="TRUE">TRUE</option>
+					<option value="FALSE">FALSE</option>
+				</field>
+            	<field name="data-skin" type="list" default="light" label="data-skin" description="Optional. Sets the color theme for the plugin content.">
+  					<option value="light">light</option>
+					<option value="dark">dark</option>
+				</field>
+				
+			</fieldset>
+			<fieldset
+				name="advanced">
+
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+
+				<field
+					name="moduleclass_sfx"
+					type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+
+				<field
+					name="cache"
+					type="list"
+					default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+					<option
+						value="1">JGLOBAL_USE_GLOBAL</option>
+					<option
+						value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+
+				<field
+					name="cache_time"
+					type="text"
+					default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+
+				<field
+					name="cachemode"
+					type="hidden"
+					default="static">
+					<option
+						value="static"></option>
+				</field>
+
+			</fieldset>
+
+		</fields>
+	
+	</config>
+</extension>	
