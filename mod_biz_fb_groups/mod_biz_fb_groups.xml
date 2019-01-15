@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<extension type="module" version="3.8.10" client="site" method="upgrade">
+<extension type="module" version="3.9" client="site" method="upgrade">
     <name>Like Facebook Group</name>
     <author>Pieter Groeneweg</author>
     <version>1.0.0</version>
@@ -13,26 +13,31 @@
         <filename>tmpl/index.html</filename>
     </files>
 	<config>
-	
+
 		<fields name="params">
 			<fieldset name="basic">
 
             	<field name="APP_ID" type="text" default="" label="APP_ID" description="The App ID of your Facebook app." />
 				<field name="data-href" type="text" default="" label="data-href" description="The absolute URL of the group." />
             	<field name="data-width" type="text" default="280" label="data-width" description="Set the plugin width in pixels. The minimum width is 180 and the maximu width is 500 pixels." />
-            	<field name="data-show-social-context" type="list" default="TRUE" label="data-show-social-context" description="Show the number of friends who are members of the group.">
-  					<option value="TRUE">TRUE</option>
-					<option value="FALSE">FALSE</option>
+            	<field name="data-show-social-context" type="list" default="true" label="data-show-social-context" description="Show the number of friends who are members of the group.">
+  					<option value="true">True</option>
+					<option value="false">False</option>
 				</field>
-            	<field name="data-show-metadata" type="list" default="FALSE" label="data-show-metadata" description="Shows other metadata about the group, e.g., Description.">
-  					<option value="TRUE">TRUE</option>
-					<option value="FALSE">FALSE</option>
+            	<field name="data-show-metadata" type="list" default="false" label="data-show-metadata" description="Shows other metadata about the group, e.g., Description.">
+  					<option value="true">True</option>
+					<option value="false">False</option>
 				</field>
-            	<field name="data-skin" type="list" default="light" label="data-skin" description="Optional. Sets the color theme for the plugin content.">
-  					<option value="light">light</option>
-					<option value="dark">dark</option>
+            	<field name="data-skin" type="list" default="light" label="data-skin" description="Sets the color theme for the plugin content.">
+  					<option value="light">Light</option>
+					<option value="dark">Dark</option>
 				</field>
-				
+            	<field name="autoLog" type="list" default="false" label="Collect Analysis" description="Collect Analysis">
+  					<option value="true">True</option>
+					<option value="false">False</option>
+				</field>
+                <field name="defLoc" type="text" default="en_US" label="Default Locale" description="The default language and country code when not supported by facebook locales." />
+
 			</fieldset>
 			<fieldset
 				name="advanced">
@@ -79,6 +84,6 @@
 			</fieldset>
 
 		</fields>
-	
+
 	</config>
 </extension>	
